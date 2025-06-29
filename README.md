@@ -1,0 +1,1 @@
+# 6-ejercicio_galeria_ecommerce.html
