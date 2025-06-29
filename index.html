@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Galería de Productos</title>
+    <link rel="stylesheet" href="css/styles.css">
+        
+</head>
+
+<body>
+    <div class="device-indicator" data-device="Mobile"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">TechStore</div>
+                <div class="breadcrumb">Inicio > Productos > Electrónicos</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Instrucciones del ejercicio -->
+        <section class="exercise-instructions">
+            <h2 class="instructions-title">🎯 Tu Misión: Optimizar Galería E-commerce</h2>
+            <p style="font-size: var(--font-base); margin-bottom: var(--space-md);">
+                Completa la implementación de imágenes responsive para esta galería de productos. Los usuarios deben
+                tener una experiencia perfecta desde móvil hasta desktop 4K.
+            </p>
+
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <div class="requirement-title">📸 Imágenes Responsive</div>
+                    <p style="font-size: var(--font-sm);">Implementa srcset y sizes para cargar la resolución óptima
+                        según el dispositivo.</p>
+                </div>
+
+                <div class="requirement-card">
+                    <div class="requirement-title">🎨 Art Direction</div>
+                    <p style="font-size: var(--font-sm);">Usa picture element para mostrar diferentes composiciones en
+                        móvil vs desktop.</p>
+                </div>
+
+                <div class="requirement-card">
+                    <div class="requirement-title">⚡ Performance</div>
+                    <p style="font-size: var(--font-sm);">Implementa lazy loading y optimizaciones para carga rápida.
+                    </p>
+                </div>
+
+                <div class="requirement-card">
+                    <div class="requirement-title">♿ Accesibilidad</div>
+                    <p style="font-size: var(--font-sm);">Texto alternativo descriptivo y aspect-ratio para evitar
+                        layout shift.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de productos -->
+        <section class="products-section">
+            <h2 class="section-title">Productos Destacados</h2>
+            <div class="products-grid">
+
+                <!-- Producto 1: Smartphone (picture con art direction y srcset) -->
+                <article class="product-card">
+                    <div class="product-image-container" style="aspect-ratio: 4/3; overflow: hidden;">
+                        <picture>
+                            <source media="(max-width: 767px)"
+                                srcset="https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-240909_inline.jpg.large.jpg">
+                            <img class="product-image"
+                                src="https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-240909_inline.jpg.large.jpg"
+                                alt="iPhone 16 Pro mostrando diseño de titanio y pantalla sin bordes" loading="lazy">
+                        </picture>
+                        <span class="product-badge">Nuevo</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Smartphone Pro Max 128GB</h3>
+                        <p class="product-description">
+                            Último modelo con cámara de 108MP, pantalla AMOLED de 6.7" y batería de larga duración.
+                            Perfecto para fotografía profesional.
+                        </p>
+                        <div class="product-price">
+                            <span class="original">$1,299</span>
+                            $999
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Agregar al Carrito</button>
+                            <button class="btn btn-secondary">Ver Detalles</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 2: Laptop (img con srcset y descriptores w) -->
+                <article class="product-card">
+                    <div class="product-image-container" style="aspect-ratio: 3/2; overflow: hidden;">
+                        <img class="product-image"
+                            src="https://sm.ign.com/t/ign_nordic/deal/t/the-powerf/the-powerful-alienware-m16-16-i7-rtx-4070-gaming-laptop-is-o_f7y1.1280.jpg"
+                            srcset="
+                                https://sm.ign.com/t/ign_nordic/deal/t/the-powerf/the-powerful-alienware-m16-16-i7-rtx-4070-gaming-laptop-is-o_f7y1.1280.jpg 400w,
+                                https://sm.ign.com/t/ign_nordic/deal/t/the-powerf/the-powerful-alienware-m16-16-i7-rtx-4070-gaming-laptop-is-o_f7y1.1280.jpg 800w,
+                                https://sm.ign.com/t/ign_nordic/deal/t/the-powerf/the-powerful-alienware-m16-16-i7-rtx-4070-gaming-laptop-is-o_f7y1.1280.jpg 1200w
+                            " sizes="(max-width: 768px) 100vw, 33vw"
+                            alt="Laptop con teclado iluminado y pantalla encendida en juego 3D" loading="lazy">
+                        <span class="product-badge" style="background: var(--secondary);">Oferta</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Laptop Gaming RTX 4070</h3>
+                        <p class="product-description">
+                            Laptop para gaming con procesador Intel i7, 32GB RAM, SSD 1TB y tarjeta gráfica RTX 4070.
+                            Rendimiento extremo garantizado.
+                        </p>
+                        <div class="product-price">
+                            <span class="original">$2,199</span>
+                            $1,799
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Agregar al Carrito</button>
+                            <button class="btn btn-secondary">Comparar</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image-container" style="aspect-ratio: 1/1; overflow: hidden;">
+                        <picture>
+                            <source type="image/webp"
+                                srcset="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MQTQ3?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=cXVGSnFxTEtRZG50UXdIWkpNNUVkMmorYzFkTG5HaE9wejd5WUxYZjRMOHoveDdpQVpwS0ltY2w2UW05aU90T1lYTmlwOFY3ZXdFd0FRY2dWaUc5UlE">
+                            <img class="product-image"
+                                src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/MQTQ3?wid=2000&hei=2000&fmt=jpeg&qlt=90&.v=cXVGSnFxTEtRZG50UXdIWkpNNUVkMmorYzFkTG5HaE9wejd5WUxYZjRMOHoveDdpQVpwS0ltY2w2UW05aU90T1lYTmlwOFY3ZXdFd0FRY2dWaUc5UlE"
+                                alt="Auriculares con cancelación de ruido en color negro y diseño ergonómico"
+                                loading="lazy">
+                        </picture>
+                        <span class="product-badge" style="background: var(--primary);">Premium</span>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Auriculares Noise Cancelling Pro</h3>
+                        <p class="product-description">
+                            Cancelación de ruido activa, sonido Hi-Res, 30 horas de batería y conexión Bluetooth 5.3. La
+                            mejor experiencia de audio.
+                        </p>
+                        <div class="product-price">$349</div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Agregar al Carrito</button>
+                            <button class="btn btn-secondary">Escuchar Demo</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Producto 4: Smartwatch (background image con CSS) -->
+                <article class="product-card">
+                    <div class="product-image-container"
+                        style="aspect-ratio: 1/1; background-image: url('https://cdn.webshopapp.com/shops/87774/files/435108620/yp-b41-smartwatch-silicone-strap-health-monitor-ac.jpg'); background-size: cover; background-position: center;">
+                    </div>
+                   
+                    <div class="product-content">
+                        <h3 class="product-title">Smartwatch Health Monitor</h3>
+                        <p class="product-description">
+                            Monitoreo de salud 24/7, GPS integrado, resistente al agua hasta 50m y batería de 7 días. Tu
+                            compañero de bienestar.
+                        </p>
+                        <div class="product-price">$299</div>
+                        <div class="product-actions">
+                            <button class="btn btn-primary">Agregar al Carrito</button>
+                            <button class="btn btn-secondary">Ver Compatibilidad</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+      
+        
+    </main>
+
+    <script>
+        // Simulación de carga de imágenes
+        const imageContainers = document.querySelectorAll('.product-image-container');
+
+        imageContainers.forEach((container, index) => {
+            const placeholder = container.querySelector('.image-placeholder');
+            if (placeholder) {
+                // Simular carga después de 2 segundos
+                setTimeout(() => {
+                    placeholder.style.opacity = '0.5';
+                    placeholder.innerHTML = `
+                        <div style="text-align: center;">
+                            ⏳<br>
+                            <small>Cargando imagen optimizada...</small>
+                        </div>
+                    `;
+                }, 1000 + (index * 500));
+            }
+        });
+
+        
+
+        // Verificar implementación
+        function checkImplementation() {
+            const pictures = document.querySelectorAll('picture');
+            const imagesWithSrcset = document.querySelectorAll('img[srcset]');
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+
+            console.log(`
+📊 ESTADO DE TU IMPLEMENTACIÓN:
+• Picture elements: ${pictures.length}
+• Imágenes con srcset: ${imagesWithSrcset.length}
+• Imágenes con lazy loading: ${lazyImages.length}
+
+${pictures.length > 0 ? '✅' : '❌'} Picture elements implementados
+${imagesWithSrcset.length > 0 ? '✅' : '❌'} Srcset implementado
+${lazyImages.length > 0 ? '✅' : '❌'} Lazy loading implementado
+            `);
+        }
+
+        // Verificar cada 5 segundos
+        setInterval(checkImplementation, 5000);
+
+        // Verificación inicial
+        setTimeout(checkImplementation, 2000);
+    </script>
+</body>
+
+</html>
